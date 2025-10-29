@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmar exclusão</title>
+</head>
+<body>
+    <h1>Excluir {{ object.nome_turma}}?></h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmar</button>
+    </form>
+    <a href="{% url 'turma_list' %}">Cancelar</a>
+</body>
+</html>

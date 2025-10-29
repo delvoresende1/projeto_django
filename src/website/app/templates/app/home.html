@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestão de Cursos - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 240px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #0d6efd;
+            color: white;
+            padding-top: 30px;
+        }
+        .sidebar h4 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+        .sidebar a:hover {
+            background-color: #0b5ed7;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <div class="sidebar">
+        <h4>Menu</h4>
+        <a href="{% url 'curso_list' %}">📘 Curso</a>
+        <a href="{% url 'turma_list' %}">🏫 Turma</a>
+        <a href="{% url 'aluno_list' %}">🎓 Aluno</a>
+        <a href="{% url 'instrutor_list' %}">👨‍🏫 Instrutor</a>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="content">
+        <h2 class="text-primary">Bem-vindo ao Sistema de Gestão de Cursos</h2>
+        <p class="lead mt-3">Utilize o menu lateral para acessar os cadastros e relatórios disponíveis.</p>
+
+        <div class="alert alert-info mt-4">
+            <strong>Dica:</strong> Você pode navegar pelos relatórios de cursos, turmas e alunos de forma interativa.
+        </div>
+    </div>
+
+</body>
+</html>
