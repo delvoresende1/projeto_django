@@ -30,6 +30,7 @@
                     <td>
                         <a href="{% url 'aluno_update' aluno.pk %}" class="btn btn-warning btn-sm">Editar</a>
                         <a href="{% url 'aluno_delete' aluno.pk %}" class="btn btn-danger btn-sm">Excluir</a>
+                        <a href="{% url 'home' %}" class="btn btn-primary btn-sm">Voltar</a>
                     </td>
                 </tr>
                 {% endfor %}

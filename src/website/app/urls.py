@@ -34,6 +34,7 @@ urlpatterns = [
     path("cursos/novo/", CursoCreateView.as_view(), name="curso_create"),
     path("cursos/<int:pk>/editar/", CursoUpdateView.as_view(), name="curso_update"),
     path("cursos/<int:pk>/deletar/", CursoDeleteView.as_view(), name="curso_delete"),
+    
 
      #ciclo
     path("ciclos/", CicloListView.as_view(), name="ciclo_list"),
